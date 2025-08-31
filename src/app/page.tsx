@@ -1,7 +1,7 @@
 import { generateLandingPageContent, GenerateLandingPageContentOutput } from "@/ai/flows/generate-landing-page-content";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ClipboardPen, Timer, Users } from "lucide-react";
+import DynamicIcon from "@/components/icons/dynamic-icon";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -27,17 +27,17 @@ export default async function Home() {
     {
       title: "Streamlined Booking",
       description: "Easily book appointments with your preferred hospital and doctor in just a few clicks.",
-      icon: <ClipboardPen className="w-12 h-12 text-primary" />,
+      icon: <DynamicIcon name="clipboard-pen" className="w-12 h-12 text-primary" />,
     },
     {
       title: "Real-Time Queue",
       description: "See your position in the queue live and get accurate wait time predictions.",
-      icon: <Users className="w-12 h-12 text-primary" />,
+      icon: <DynamicIcon name="users" className="w-12 h-12 text-primary" />,
     },
     {
       title: "Reduced Wait Times",
       description: "Our smart system optimizes schedules to get you seen faster.",
-      icon: <Timer className="w-12 h-12 text-primary" />,
+      icon: <DynamicIcon name="timer" className="w-12 h-12 text-primary" />,
     },
   ];
 
@@ -85,7 +85,7 @@ export default async function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="flex flex-col items-center space-y-4">
               <div className="p-4 bg-primary/10 rounded-full">
-                <ClipboardPen className="w-10 h-10 text-primary" />
+                <DynamicIcon name="clipboard-pen" className="w-10 h-10 text-primary" />
               </div>
               <h3 className="text-xl font-headline">1. Register & Book</h3>
               <p className="text-muted-foreground">
@@ -94,7 +94,7 @@ export default async function Home() {
             </div>
             <div className="flex flex-col items-center space-y-4">
               <div className="p-4 bg-primary/10 rounded-full">
-                <Users className="w-10 h-10 text-primary" />
+                <DynamicIcon name="users" className="w-10 h-10 text-primary" />
               </div>
               <h3 className="text-xl font-headline">2. Join the Queue</h3>
               <p className="text-muted-foreground">
@@ -103,7 +103,7 @@ export default async function Home() {
             </div>
             <div className="flex flex-col items-center space-y-4">
               <div className="p-4 bg-primary/10 rounded-full">
-                <Timer className="w-10 h-10 text-primary" />
+                <DynamicIcon name="timer" className="w-10 h-10 text-primary" />
               </div>
               <h3 className="text-xl font-headline">3. Get Seen Faster</h3>
               <p className="text-muted-foreground">
