@@ -1,4 +1,4 @@
-import { generateLandingPageContent } from "@/ai/flows/generate-landing-page-content";
+import { generateLandingPageContent, GenerateLandingPageContentOutput } from "@/ai/flows/generate-landing-page-content";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ClipboardPen, Timer, Users } from "lucide-react";
@@ -6,9 +6,22 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default async function Home() {
-  const content = await generateLandingPageContent({
-    targetAudience: 'patients'
-  });
+  let content: GenerateLandingPageContentOutput;
+
+  try {
+    content = await generateLandingPageContent({
+      targetAudience: 'patients'
+    });
+  } catch (error) {
+    console.error("Failed to generate landing page content:", error);
+    // Provide fallback content
+    content = {
+      headline: "Revolutionizing Your Hospital Experience",
+      subheadline: "Say goodbye to long waits. With QuickHealth, you can see your queue position in real-time and book appointments effortlessly.",
+      body: "We're transforming the healthcare journey by providing smart tools for both patients and hospitals, ensuring efficiency and satisfaction.",
+      callToAction: "Get Started Now",
+    };
+  }
 
   const features = [
     {
