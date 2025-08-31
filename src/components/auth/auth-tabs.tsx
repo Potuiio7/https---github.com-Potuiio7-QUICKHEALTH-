@@ -10,7 +10,7 @@ type AuthTabsProps = {
 
 export default function AuthTabs({ mode }: AuthTabsProps) {
   const title = mode === 'login' ? 'Welcome Back!' : 'Create an Account';
-  const description = mode === 'login' ? 'Log in to access your dashboard.' : 'Sign up to get started with QueueWise.';
+  const description = mode === 'login' ? 'Log in to access your dashboard.' : 'Sign up to get started with QuickHealth.';
 
   return (
     <Tabs defaultValue="patient" className="w-full max-w-md">

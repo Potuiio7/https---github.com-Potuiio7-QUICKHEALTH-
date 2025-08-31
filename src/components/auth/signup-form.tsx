@@ -73,7 +73,7 @@ export default function SignupForm({ userType }: SignupFormProps) {
     // Placeholder for Firebase Auth and Firestore write
     toast({
       title: "Account Created",
-      description: "Welcome to QueueWise! Please check your email for verification.",
+      description: "Welcome to QuickHealth! Please check your email for verification.",
     });
     // Redirect logic would go here
   }

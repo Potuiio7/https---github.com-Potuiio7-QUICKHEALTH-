@@ -138,7 +138,7 @@ export default async function Home() {
               Ready to Transform Your Hospital Visit?
             </h2>
             <p className="text-lg mb-6 max-w-2xl mx-auto">
-              Join QueueWise today and experience healthcare that values your time.
+              Join QuickHealth today and experience healthcare that values your time.
             </p>
             <Button asChild size="lg" variant="secondary" className="font-bold">
               <Link href="/signup">{content.callToAction}</Link>

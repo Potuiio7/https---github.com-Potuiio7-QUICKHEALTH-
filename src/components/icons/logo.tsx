@@ -17,7 +17,7 @@ export default function Logo({ className }: { className?: string }) {
         />
         <path d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7z" fill="currentColor" />
       </svg>
-      <span className="text-2xl font-headline font-bold">QueueWise</span>
+      <span className="text-2xl font-headline font-bold">QuickHealth</span>
     </div>
   );
 }
